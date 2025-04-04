@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <link rel="stylesheet" href="about.css">
+  <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+  <style>
+body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #100f10,#077debdb);
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 i, h2 i {
+      margin-right: 10px;
+    }
+
+    .about-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .about-nav button {
+      background: white;
+      color: #6a1b9a;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .about-nav button:hover {
+      background: #077debdb;
+      color: #4a148c;
+    }
+
+    .about-section {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .about-section.active {
+      display: block;
+    }
+
+    .education-card,
+    .cert-card,
+    .skills-grid {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .education-card img,
+    .cert-card img {
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .skill-box {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 2px solid #ffffff30;
+      border-radius: 10px;
+      width: 100px;
+      height: 100px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .cert-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .cert-card img {
+  width: 100%; /* Ensures it takes full width of the container */
+  max-width: 500px; /* Adjust this value based on your layout */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #002f6c; /* Dark blue border */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for a 3D effect */
+}
+
+
+    .cert-card p {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+     <h2 style="color: #ffffff;"><i class="fas fa-user"></i> About Me</h2>
+
+    <!-- Navigation -->
+    <div class="about-nav">
+      <button onclick="showSection('education')">My Education</button>
+      <button onclick="showSection('skills')">Technical Skills</button>
+      <button onclick="showSection('certifications')">Courses & Certifications</button>
+      <button onclick="showSection('extra')">Extra-Curricular Activities</button>
+    </div>
+
+    <!-- Sections -->
+    <div id="education" class="about-section active">
+      <h2><i class="fa-solid fa-graduation-cap"></i> My Education</h2>
+
+      <div class="education-card">
+        <img src="images/sjce.jpeg" alt="JSSSTU Logo" class="college-logo">
+        <h3>Master of Computer Applications <i class="fa-solid fa-laptop-code"></i></h3>
+        <p><strong>JSS Science and Technological University, Mysore</strong></p>
+        <p>Year of Passing: 2024 | CGPA: 8.37</p>
+      </div>
+
+      <div class="education-card">
+        <img src="images/mit1.png" alt="MIT College Logo" class="college-logo">
+        <h3>Bachelor of Computer Applications <i class="fa-brands fa-laptop-code"></i></h3>
+        <p><strong>MIT First Grade College, Mysore (University of Mysuru)</strong></p>
+        <p>Year of Passing: 2022 | CGPA: 7.69</p>
+      </div>
+
+      <div class="education-card">
+        <img src="images/mj.avif" alt="Maharaja College Logo" class="college-logo">
+        <h3>PUC <i class="fa-solid fa-school"></i></h3>
+        <p><strong>Maharaja Govt Pre-University College, Mysore</strong></p>
+        <p>Year of Passing: 2019 | Percentage: 53.9%</p>
+      </div>
+
+      <div class="education-card">
+        <img src="images/jss.jpeg" alt="SSLC School Logo" class="college-logo">
+        <h3>SSLC <i class="fa-solid fa-book"></i></h3>
+        <p><strong>JSS HIGH School, Mysore</strong></p>
+        <p>Year of Passing: 2016 | Percentage: 85.6%</p>
+      </div>
+    </div>
+
+    <div id="skills" class="about-section">
+      <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+        <div class="skill-box"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+        <div class="skill-box"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+        <div class="skill-box"><i class="fa-brands fa-react"></i><span>React Native</span></div>
+        <div class="skill-box"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+        <div class="skill-box"><i class="fa-solid fa-cloud"></i><span>Cloud Computing</span></div>
+        <div class="skill-box"><i class="fa-brands fa-java"></i><span>Java</span></div>
+        <div class="skill-box"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      </div>
+    </div>
+
+    <div id="certifications" class="about-section">
+      <h2><i class="fa-solid fa-certificate"></i> Courses & Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <img src="certificates/java.jpg" alt="Java Certificate">
+          <p>Java Certification</p>
+        </div>
+        <div class="cert-card">
+          <img src="images/sql_cer.jpg" alt="SQL Certificate">
+          <p>SQL Certification</p>
+        </div>
+        <div class="cert-card">
+          <img src="images/js_cer.jpg" alt="JavaScript Certificate">
+          <p>JavaScript Certification</p>
+        </div>
+      </div>
+    </div>
+
+  <div id="extra" class="about-section" style="background-color: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 20px; box-shadow: 0 0 10px rgba(128, 0, 128, 0.3);">
+  <h2 style="color: #ffffff;">
+    <i class="fa-solid fa-star" style="color: #e3b3ff;"></i> Extra-Curricular Activities
+  </h2>
+  <ul style="color: #f0e9ff; font-size: 18px; line-height: 1.8;">
+    <li><i class="fa-solid fa-laptop-code"></i><strong><b><i>Exploring Technology & Building Websites💻</i></b></strong></li>
+    <li><i class="fa-solid fa-baseball-bat-ball"></i><strong><b><i>Playing Cricket 🏏&🏐 Volleyball</i></b></strong></li>
+    <li><i class="fa-solid fa-motorcycle"></i><strong><b><i> Exploring & Riding 🏍️ Bike in Nature</i></b></strong></li>
+    <li><i class="fa-solid fa-tree"></i><strong><b><i>Enjoying Scenic Places 🌿</i></b></strong></li>
+   
+  </ul>
+</div>
+
+  </div>
+
+  <!-- JS to control section switching -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.about-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      const target = document.getElementById(sectionId);
+      if (target) {
+        target.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
