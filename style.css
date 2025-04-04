@@ -285,7 +285,7 @@ nav .navlinks li a{
 
 /* Hover Effect */
 .project-card:hover {
-    transform: scale(1.00);
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(42, 142, 229, 0.7);
 }
 
