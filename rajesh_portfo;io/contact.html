@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Rajesh P.</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reusing the same CSS -->
+    <style>
+        /* Standard Styling for Input Fields & Buttons */
+        .contact-form {
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+        .contact-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #007ced;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #333;
+            color: #fff;
+            outline: none;
+        }
+
+        .contact-form input::placeholder {
+            color: #bbb;
+        }
+
+        .btn-standard {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp {
+            background-color: #53c278;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1e2420;
+        }
+
+        .btn-email {
+            background-color: #007ced;
+            color: white;
+        }
+
+        .btn-email:hover {
+            background-color: #0c0d0d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i>R</i>
+                    <span class="logo-text">Rajesh P</span>
+                </div>
+                <nav>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="https://medium.com/@rajesh_laalu">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Contact Me</h1>
+                    <p>Feel free to reach out to me via WhatsApp or Email.</p>
+            
+                    <div class="contact-info">
+                        <p><strong>📞 Phone:</strong> <a href="tel:+919538675930">+91 9538675930</a></p>
+                        <p><strong>📲 WhatsApp:</strong> <a href="https://wa.me/919538675930" target="_blank">Chat on WhatsApp</a></p>
+                        <p><strong>📧 Email:</strong> <a href="mailto:rajeshpapannah@gmail.com">rajeshpapannah@gmail.com</a></p>
+                    </div>
+                    
+                    <h3>Send Your Details</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="input-group">
+                            <input type="text" id="userName" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="userPhone" placeholder="Enter Your Phone Number" required>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-standard btn-whatsapp" type="button" onclick="sendMessage()">Send via WhatsApp</button>
+                            <button class="btn-standard btn-email" type="button" onclick="sendEmail()">Send via Email</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let name = document.getElementById("userName").value;
+            let phone = document.getElementById("userPhone").value;
+
+            if (name === "" || phone === "") {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            let whatsappLink = `https://wa.me/919538675930?text=Hello%20Rajesh,%0AMy%20Name:%20${name}%0APhone:%20${phone}`;
+            window.open(whatsappLink, "_blank");
+        }
+
+        function sendEmail() {
+            let name = document.getElementById("userName").value;
+            let phone = document.getElementById("userPhone").value;
+
+            if (name === "" || phone === "") {
+                alert("Please fill all fields!");
+                return;
+            }
+
+            let mailtoLink = `mailto:rajeshpapannah@gmail.com?subject=New Contact Request&body=Name: ${name}%0APhone: ${phone}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+</body>
+</html>
