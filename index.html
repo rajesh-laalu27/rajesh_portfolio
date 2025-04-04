@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i>R</i>
+                    <div class="logo-text">  Rajesh P</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="https://medium.com/@rajesh_laalu" target="_blank">Blog</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                    </ul>
+                    
+                    <script>
+                    function uploadResume() {
+                        document.getElementById('resumeUpload').click();
+                    }
+                    </script>
+                    
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/rajesh2.jpg" alt="Profile Picture">
+
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Tech Enthusiast</span></h5>
+                    <h1>RAJESH P</h1>
+                      
+                    <p><i>"Magic behind computers, made simple!"</i></p>  
+                    <p><i></i>MCA Graduate | Passionate about Software Development</i></p> 
+
+                    <div class="btn-group">
+                        <div class="btn-group">
+                            <a href="https://drive.google.com/file/d/1si4QIdBeEcuJA4mwSwp9Vck1BlGfJBLq/view?usp=drivesdk" target="_blank" class="btn active">
+                                Download CV
+                            </a>
+                       <a href="contact.html" class="btn">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/rajesh-p-2704rp" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rajesh_laalu?igsh=MTh6bnh0aXU3MWtneg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/rajesh-laalu27"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://medium.com/@rajesh_laalu"><i class="fa-brands fa-medium"></i></a>
+                        <a href="https://x.com/rajesh_laalu"><i class="fa-brands fa-x"></i></a>
+                    </div>
+                    
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["tech Enthusiast","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
